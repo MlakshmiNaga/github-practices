@@ -22,7 +22,7 @@ public class EventController {
 			kafkaMessagePublisher.sendMessageToTopic(message);
 			return ResponseEntity.ok("message pblished successfully..");
 		} catch (Exception e) {
-			System.err.println(e);
+			System.err.println("e"+e);
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 			
 		}
